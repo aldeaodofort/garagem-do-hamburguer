@@ -1,1641 +1,400 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Monteville Serralheria Artística - peças artesanais em metal, madeira e projetos personalizados.">
-
-    <title>Monteville | Serralheria Artística</title>
-
-
-    <!-- =====================================================
-         FONT AWESOME
-    ====================================================== -->
-
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
 
+    <link rel="stylesheet" href="src/css/style.css">
 
-    <!-- =====================================================
-         FONTE
-    ====================================================== -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-
-    <!-- =====================================================
-         CSS
-    ====================================================== -->
-
-    <link rel="stylesheet" href="style.css">
-
+    <title>Garagem do Hambúrguer</title>
 </head>
 
-
 <body>
-
 
     <!-- =====================================================
          NAVBAR
     ====================================================== -->
 
-    <header class="navbar-wrapper">
+    <header>
 
         <nav class="navbar">
 
-
-            <!-- LOGO -->
-
-            <a href="#inicio" class="brand">
-
-                <div class="brand-logo-container">
-
-                    <img
-                        src="assets/logo monteville.jpeg"
-                        alt="Logo Monteville Serralheria"
-                        class="brand-logo">
-
-                </div>
-
-                <div class="brand-text">
-
-                    <span class="brand-name">
-                        <span class="m-minusculo">m</span>onteville
-                    </span>
-
-                    <small>
-                        Serralheria Artística
-                    </small>
-
-                </div>
-
+            <!-- TEM Q AJEITAR DPSSSS -->
+            <a href="#home" class="logo-link">
+                <img
+                    src="src/images/logo-garagem.jpga"
+                    alt=""
+                    class="logo">
             </a>
 
-
-            <!-- LINKS DESKTOP -->
-
-            <div class="nav-links">
-
-                <a href="#inicio" class="nav-link active">
-                    Início
-                </a>
-
-                <a href="#produtos" class="nav-link">
-                    Nossos Produtos
-                </a>
-
-                <a
-                    href="https://www.instagram.com/serralheriamonteville"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="nav-link instagram-link">
-
-                    <i class="fa-brands fa-instagram"></i>
-
-                    Instagram
-
-                </a>
-
-            </div>
-
-
-            <!-- BOTÃO MOBILE -->
-
-            <button
-                class="menu-button"
-                id="menuButton"
-                aria-label="Abrir menu"
-                aria-expanded="false">
-
+            <button class="btn-mobile" aria-label="Abrir menu">
                 <i class="fa-solid fa-bars"></i>
-
             </button>
 
-        </nav>
+            <ul id="nav-links">
 
+                <li>
+                    <a href="#home">Início</a>
+                </li>
 
-        <!-- =================================================
-             MENU MOBILE
-        ================================================== -->
+                <li>
+                    <a href="#trend">Em Alta</a>
+                </li>
 
-        <div class="mobile-menu" id="mobileMenu">
+                <li>
+                    <a href="#about">Sobre Nós</a>
+                </li>
 
-            <a href="#inicio">
-                <i class="fa-solid fa-house"></i>
-                Início
-            </a>
+                <li>
+                    <a href="#products">Nossos Lanches</a>
+                </li>
 
-            <a href="#produtos">
-                <i class="fa-solid fa-store"></i>
-                Nossos Produtos
-            </a>
+            </ul>
 
             <a
-                href="https://www.instagram.com/serralheriamonteville"
+                href="https://wa.me/5512000000000"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+                class="btn btn-default">
 
-                <i class="fa-brands fa-instagram"></i>
-                Instagram
+                <i class="fa-brands fa-whatsapp"></i>
+
+                Fazer Pedido
 
             </a>
 
-        </div>
+        </nav>
 
     </header>
 
 
-
     <!-- =====================================================
-         HERO
+         CONTEÚDO
     ====================================================== -->
 
     <main>
 
-        <section class="hero" id="inicio">
 
+        <!-- =================================================
+             HOME
+        ================================================== -->
 
-            <div class="hero-glow"></div>
+        <section id="home" class="hero">
 
+            <div class="hero-content">
 
-            <div class="hero-container">
+                <span class="hero-tag">
+                    <i class="fa-solid fa-fire"></i>
+                    O sabor que acelera seu dia
+                </span>
 
+                <h1>
+                    NÃO É SÓ UM
+                    <span>HAMBÚRGUER.</span>
+                    É UMA EXPERIÊNCIA.
+                </h1>
 
-                <!-- TEXTO -->
+                <p>
+                    Hambúrguer artesanal, ingredientes de qualidade
+                    e aquele sabor que faz você querer voltar.
+                </p>
 
-                <div class="hero-content">
+                <div class="hero-buttons">
 
+                    <a href="#products" class="btn btn-primary">
+                        Ver Cardápio
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
 
-                    <span class="hero-tag">
+                    <a
+                        href="https://wa.me/5512000000000"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-outline">
 
-                        <i class="fa-solid fa-hammer"></i>
+                        <i class="fa-brands fa-whatsapp"></i>
 
-                        ARTE, METAL E PERSONALIDADE
+                        Pedir pelo WhatsApp
 
-                    </span>
-
-
-                    <h1>
-
-                        Serralheria que dá
-
-                        <span>
-                            forma às suas ideias.
-                        </span>
-
-                    </h1>
-
-
-                    <p class="hero-description">
-
-                        Na Monteville Serralheria Artística,
-                        criamos peças únicas em metal e madeira
-                        para transformar ambientes e deixar cada
-                        projeto com personalidade.
-
-                    </p>
-
-
-                    <!-- BOTÕES -->
-
-                    <div class="hero-buttons">
-
-
-                        <a
-                            href="#produtos"
-                            class="button button-primary">
-
-                            Conhecer produtos
-
-                            <i class="fa-solid fa-arrow-down"></i>
-
-                        </a>
-
-
-                        <a
-                            href="https://www.instagram.com/serralheriamonteville"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="button button-secondary">
-
-                            <i class="fa-brands fa-instagram"></i>
-
-                            Ver Instagram
-
-                        </a>
-
-
-                    </div>
-
-
-                    <!-- DIFERENCIAIS -->
-
-                    <div class="hero-features">
-
-
-                        <div class="feature">
-
-                            <i class="fa-solid fa-hammer"></i>
-
-                            <span>
-                                Produção artesanal
-                            </span>
-
-                        </div>
-
-
-                        <div class="feature">
-
-                            <i class="fa-solid fa-star"></i>
-
-                            <span>
-                                Peças diferenciadas
-                            </span>
-
-                        </div>
-
-
-                        <div class="feature">
-
-                            <i class="fa-solid fa-ruler-combined"></i>
-
-                            <span>
-                                Feito sob medida
-                            </span>
-
-                        </div>
-
-
-                    </div>
-
+                    </a>
 
                 </div>
 
+            </div>
 
+            <!-- TEM QUE AJEITAR DPSSSSS -->
+            <div class="hero-image">
 
-                <!-- IMAGEM -->
+                <div class="hero-circle"></div>
 
-                <div class="hero-image-container">
+                <img
+                    src="src/images/logo-garagem.jpga"
+                    alt=""
+                    class="logo-garagem-main">
 
-                    <div class="hero-image-border"></div>
+                <div class="floating-card">
 
+                    <i class="fa-solid fa-star"></i>
 
-                    <img
-                        src="assets/logo monteville.jpeg"
-                        alt="Monteville Serralheria Artística"
-                        class="hero-image">
-                    </div>    
-
+                    <div>
+                        <strong>4,9</strong>
+                        <span>Avaliação</span>
+                    </div>
 
                 </div>
-
 
             </div>
 
         </section>
 
+
+        <!-- =================================================
+             EM ALTA
+        ================================================== -->
+
+        <section id="trend" class="section">
+
+            <div class="section-title">
+
+                <span>OS FAVORITOS</span>
+
+                <h2>
+                    Em <strong>Alta</strong>
+                </h2>
+
+                <p>
+                    O sabor que está fazendo sucesso na Garagem.
+                </p>
+
+            </div>
+
+
+            <div class="trend-grid">
+
+                <article class="trend-card">
+
+                    <div class="trend-icon">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+
+                    <h3>Mais Pedido</h3>
+
+                    <p>
+                        O favorito da galera.
+                    </p>
+
+                </article>
+
+
+                <article class="trend-card">
+
+                    <div class="trend-icon">
+                        <i class="fa-solid fa-burger"></i>
+                    </div>
+
+                    <h3>Artesanal</h3>
+
+                    <p>
+                        Feito com ingredientes selecionados.
+                    </p>
+
+                </article>
+
+
+                <article class="trend-card">
+
+                    <div class="trend-icon">
+                        <i class="fa-solid fa-motorcycle"></i>
+                    </div>
+
+                    <h3>Delivery</h3>
+
+                    <p>
+                        A Garagem chega até você.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SOBRE
+        ================================================== -->
+
+        <section id="about" class="about section">
+
+            <div class="about-content">
+
+                <span>DESDE A PRIMEIRA MORDIDA</span>
+
+                <h2>
+                    Bem-vindo à
+                    <strong>Garagem.</strong>
+                </h2>
+
+                <p>
+                    Aqui a gente acredita que hambúrguer não precisa
+                    ser só comida rápida. Cada lanche é preparado
+                    pensando em sabor, qualidade e naquele momento
+                    especial com os amigos.
+                </p>
+
+                <p>
+                    Nossa missão é levar uma experiência diferente
+                    até você, com hambúrgueres preparados com carinho
+                    e ingredientes selecionados.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             DELIVERY
+        ================================================== -->
+
+        <section class="delivery-section">
+
+            <div class="delivery-content">
+
+                <div class="delivery-icon">
+                    <i class="fa-solid fa-motorcycle"></i>
+                </div>
+
+                <div>
+
+                    <span>MATOU A FOME?</span>
+
+                    <h2>
+                        A Garagem vai até você.
+                    </h2>
+
+                    <p>
+                        Escolha seu lanche, faça seu pedido pelo WhatsApp
+                        e receba tudo no conforto da sua casa.
+                    </p>
+
+                </div>
+
+                <a
+                    href="https://wa.me/5512000000000"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-primary">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    Fazer Pedido
+
+                </a>
+
+            </div>
+
+        </section>
 
 
         <!-- =================================================
              PRODUTOS
         ================================================== -->
 
-        <section
-            class="products-section"
-            id="produtos">
+        <section id="products" class="section">
 
+            <div class="section-title">
 
-            <div class="section-header">
-
-                <span class="section-tag">
-                    NOSSO CATÁLOGO
-                </span>
-
+                <span>FEITOS NA GARAGEM</span>
 
                 <h2>
-                    Nossos Produtos
+                    Nossos <strong>Lanches</strong>
                 </h2>
 
-
                 <p>
-                    Conheça algumas das peças produzidas
-                    pela Monteville.
+                    Escolha seu favorito e faça seu pedido.
                 </p>
 
             </div>
 
 
+            <div id="products-grid" class="products-grid">
 
-            <!-- =================================================
-                 CARDS
-            ================================================== -->
-
-            <div class="cards">
-
-
-                <!-- 01 -->
-
-                <article
-                    class="card"
-                    data-name="Adega de Parede Coração"
-                    data-description="Adega de parede com formato de coração, ideal para acomodar uma garrafa e duas taças. Uma peça decorativa e funcional.">
-
-                    <img
-                        src="assets/adega-coraçao.jpeg"
-                        alt="Adega de parede coração"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>
-                            Adega de Parede Coração
-                        </h3>
-
-                        <p>
-                            Adega de parede em formato de coração,
-                            ideal para uma garrafa e duas taças.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 02 -->
-
-                <article
-                    class="card"
-                    data-name="Adega Rústica"
-                    data-description="Adega rústica feita sob medida, combinando madeira e metal para valorizar o ambiente.">
-
-                    <img
-                        src="assets/adega-de-centro-com-rodas.jpeg"
-                        alt="Adega rústica"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Adega Rústica</h3>
-
-                        <p>
-                            Adega rústica feita sob medida,
-                            combinando madeira e metal.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 03 -->
-
-                <article
-                    class="card"
-                    data-name="Adega de Parede"
-                    data-description="Modelo funcional de adega de parede com capacidade para até três garrafas e cinco taças.">
-
-                    <img
-                        src="assets/adega-parede.jpeg"
-                        alt="Adega de parede"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Adega de Parede</h3>
-
-                        <p>
-                            Modelo funcional que suporta até
-                            três garrafas e cinco taças.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 04 -->
-
-                <article
-                    class="card"
-                    data-name="Bandeja Rústica"
-                    data-description="Bandeja artesanal sob medida em madeira, com detalhes em metal e acabamento rústico.">
-
-                    <img
-                        src="assets/bandeija-rustica.jpeg"
-                        alt="Bandeja rústica"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Bandeja Rústica</h3>
-
-                        <p>
-                            Bandeja artesanal sob medida,
-                            com madeira e detalhes em metal.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 05 -->
-
-                <article
-                    class="card"
-                    data-name="Bandeja Rústica com Detalhes"
-                    data-description="Peça decorativa e funcional com acabamento artesanal e detalhes que dão personalidade ao ambiente.">
-
-                    <img
-                        src="assets/bandeira-rustica2.jpeg"
-                        alt="Bandeja rústica com detalhes"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Bandeja Rústica com Detalhes</h3>
-
-                        <p>
-                            Peça decorativa e funcional
-                            com acabamento artesanal.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 06 -->
-
-                <article
-                    class="card"
-                    data-name="Banqueta Branca"
-                    data-description="Banqueta com estrutura resistente e acabamento branco, ideal para ambientes modernos e funcionais.">
-
-                    <img
-                        src="assets/banqueta-branca.jpeg"
-                        alt="Banqueta branca"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Banqueta Branca</h3>
-
-                        <p>
-                            Estrutura resistente com acabamento
-                            moderno e elegante.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 07 -->
-
-                <article
-                    class="card"
-                    data-name="Banqueta Redonda Preta"
-                    data-description="Banqueta compacta com estrutura metálica e acabamento preto, perfeita para diferentes ambientes.">
-
-                    <img
-                        src="assets/banqueta-redonda-preto.jpeg"
-                        alt="Banqueta redonda preta"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Banqueta Redonda Preta</h3>
-
-                        <p>
-                            Banqueta compacta com estrutura
-                            metálica e visual moderno.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 08 -->
-
-                <article
-                    class="card"
-                    data-name="Base para Mesa de Mármore"
-                    data-description="Estrutura metálica resistente desenvolvida para mesas com tampo de mármore.">
-
-                    <img
-                        src="assets/base-mesa-de-marmore.jpeg"
-                        alt="Base para mesa de mármore"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Base para Mesa de Mármore</h3>
-
-                        <p>
-                            Estrutura metálica resistente
-                            para mesas com tampo de mármore.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 09 -->
-
-                <article
-                    class="card"
-                    data-name="Base para Jardineira"
-                    data-description="Suporte metálico para vasos e jardineiras, ideal para organizar plantas e valorizar áreas externas.">
-
-                    <img
-                        src="assets/base-para-jardineira-vasos.jpeg"
-                        alt="Base para jardineira"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Base para Jardineira</h3>
-
-                        <p>
-                            Suporte metálico para vasos
-                            e jardineiras.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 10 -->
-
-                <article
-                    class="card"
-                    data-name="Chaveiro Coração"
-                    data-description="Pequena peça artesanal em formato de coração, ideal para presentear ou utilizar no dia a dia.">
-
-                    <img
-                        src="assets/chaveiro-coraçao.jpeg"
-                        alt="Chaveiro coração"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Chaveiro Coração</h3>
-
-                        <p>
-                            Pequena peça artesanal em
-                            formato de coração.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 11 -->
-
-                <article
-                    class="card"
-                    data-name="Cobertura para Portão"
-                    data-description="Estrutura metálica desenvolvida para proteção e acabamento de entradas e portões.">
-
-                    <img
-                        src="assets/cobertura-portao.jpeg"
-                        alt="Cobertura para portão"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Cobertura para Portão</h3>
-
-                        <p>
-                            Estrutura metálica para proteção
-                            e acabamento de entradas.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 12 -->
-
-                <article
-                    class="card"
-                    data-name="Cutelo Artesanal"
-                    data-description="Cutelo artesanal com acabamento resistente e visual marcante, produzido com atenção aos detalhes.">
-
-                    <img
-                        src="assets/cutelo.jpeg"
-                        alt="Cutelo artesanal"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Cutelo Artesanal</h3>
-
-                        <p>
-                            Peça artesanal com acabamento
-                            resistente e visual marcante.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 13 -->
-
-                <article
-                    class="card"
-                    data-name="Faca Artesanal"
-                    data-description="Faca artesanal produzida com atenção aos detalhes e acabamento diferenciado.">
-
-                    <img
-                        src="assets/faca-artesanal.jpeg"
-                        alt="Faca artesanal"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Faca Artesanal</h3>
-
-                        <p>
-                            Produzida artesanalmente com
-                            atenção aos detalhes.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 14 -->
-
-                <article
-                    class="card"
-                    data-name="Faca Artesanal Especial"
-                    data-description="Modelo artesanal com design diferenciado e acabamento personalizado.">
-
-                    <img
-                        src="assets/faca-artesanal2.jpeg"
-                        alt="Faca artesanal especial"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Faca Artesanal Especial</h3>
-
-                        <p>
-                            Design diferenciado com
-                            acabamento personalizado.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 15 -->
-
-                <article
-                    class="card"
-                    data-name="Fruteira Rústica"
-                    data-description="Fruteira com estilo rústico, criada para organizar e decorar a cozinha com personalidade.">
-
-                    <img
-                        src="assets/fruteira-rustica.jpeg"
-                        alt="Fruteira rústica"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Fruteira Rústica</h3>
-
-                        <p>
-                            Estilo rústico para organizar
-                            e decorar sua cozinha.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 16 -->
-
-                <article
-                    class="card"
-                    data-name="Lareira para Jardim"
-                    data-description="Lareira para áreas externas, perfeita para criar momentos especiais no jardim.">
-
-                    <img
-                        src="assets/lareira-para-jardim.jpeg"
-                        alt="Lareira para jardim"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Lareira para Jardim</h3>
-
-                        <p>
-                            Ideal para áreas externas
-                            e momentos especiais.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 17 -->
-
-                <article
-                    class="card"
-                    data-name="Lixeira Rústica"
-                    data-description="Lixeira com acabamento rústico, resistente e funcional para diferentes ambientes.">
-
-                    <img
-                        src="assets/lixeira-rustica.jpeg"
-                        alt="Lixeira rústica"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Lixeira Rústica</h3>
-
-                        <p>
-                            Resistente, funcional e com
-                            acabamento rústico.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 18 -->
-
-                <article
-                    class="card"
-                    data-name="Mesa de Metalon"
-                    data-description="Mesa com estrutura em metalon, resistente e versátil para diferentes ambientes.">
-
-                    <img
-                        src="assets/mesa-de-metalon.jpeg"
-                        alt="Mesa de metalon"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Mesa de Metalon</h3>
-
-                        <p>
-                            Estrutura resistente e versátil
-                            para diferentes ambientes.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 19 -->
-
-                <article
-                    class="card"
-                    data-name="Mesinha de Centro"
-                    data-description="Mesa compacta para complementar salas e ambientes de convivência.">
-
-                    <img
-                        src="assets/mesinha-de-centro.jpeg"
-                        alt="Mesinha de centro"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Mesinha de Centro</h3>
-
-                        <p>
-                            Modelo compacto para salas
-                            e ambientes de convivência.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 20 -->
-
-                <article
-                    class="card"
-                    data-name="Número para Residências"
-                    data-description="Números personalizados para dar personalidade e destaque à fachada da sua residência.">
-
-                    <img
-                        src="assets/numero-para-residencias.jpeg"
-                        alt="Número para residência"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Número para Residências</h3>
-
-                        <p>
-                            Números personalizados para
-                            valorizar a fachada.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 21 -->
-
-                <article
-                    class="card"
-                    data-name="Paneleiro em Vergalhão"
-                    data-description="Estrutura artesanal para organização de panelas, combinando praticidade e personalidade.">
-
-                    <img
-                        src="assets/paneleiro-em-vergalhao.jpeg"
-                        alt="Paneleiro em vergalhão"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Paneleiro em Vergalhão</h3>
-
-                        <p>
-                            Organização de panelas
-                            com visual artesanal.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 22 -->
-
-                <article
-                    class="card"
-                    data-name="Porta-Chapéu Ferradura"
-                    data-description="Suporte decorativo em formato de ferradura para organizar chapéus e complementar o ambiente.">
-
-                    <img
-                        src="assets/porta-chapeu-ferradura.jpeg"
-                        alt="Porta chapéu ferradura"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Porta-Chapéu Ferradura</h3>
-
-                        <p>
-                            Suporte decorativo em formato
-                            de ferradura.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 23 -->
-
-                <article
-                    class="card"
-                    data-name="Porta-Copos"
-                    data-description="Peça prática para organizar copos e proteger superfícies com um toque artesanal.">
-
-                    <img
-                        src="assets/porta-copos-plastico.jpeg"
-                        alt="Porta copos"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Porta-Copos</h3>
-
-                        <p>
-                            Prático para organizar copos
-                            e proteger superfícies.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 24 -->
-
-                <article
-                    class="card"
-                    data-name="Porta-Mangueira com Painel"
-                    data-description="Suporte funcional para mangueira com painel decorativo para vasos e plantas.">
-
-                    <img
-                        src="assets/porta-mangeira-painel-vasos.jpeg"
-                        alt="Porta mangueira com painel"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Porta-Mangueira com Painel</h3>
-
-                        <p>
-                            Organização da mangueira com
-                            painel decorativo para vasos.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 25 -->
-
-                <article
-                    class="card"
-                    data-name="Porta-Papel Toalha"
-                    data-description="Suporte prático para manter o papel toalha organizado na cozinha.">
-
-                    <img
-                        src="assets/porta-papel-toalha.jpeg"
-                        alt="Porta papel toalha"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Porta-Papel Toalha</h3>
-
-                        <p>
-                            Suporte prático para manter
-                            a cozinha organizada.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 26 -->
-
-                <article
-                    class="card"
-                    data-name="Porta-Vaso Coruja"
-                    data-description="Suporte decorativo para vasos com detalhes inspirados em uma coruja.">
-
-                    <img
-                        src="assets/porta-vaso-coruja.jpeg"
-                        alt="Porta vaso coruja"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Porta-Vaso Coruja</h3>
-
-                        <p>
-                            Suporte decorativo com
-                            detalhes de coruja.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 27 -->
-
-                <article
-                    class="card"
-                    data-name="Porta-Vaso Flores"
-                    data-description="Suporte artesanal para vasos, ideal para decorar diferentes ambientes.">
-
-                    <img
-                        src="assets/porta-vaso-flores.jpeg"
-                        alt="Porta vaso flores"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Porta-Vaso Flores</h3>
-
-                        <p>
-                            Suporte artesanal perfeito
-                            para decoração.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 28 -->
-
-                <article
-                    class="card"
-                    data-name="Porta-Vasos Duplo Coração"
-                    data-description="Suporte duplo para vasos com detalhes decorativos em formato de coração.">
-
-                    <img
-                        src="assets/porta-vasos-duplo-coraçao.jpeg"
-                        alt="Porta vasos duplo coração"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Porta-Vasos Duplo Coração</h3>
-
-                        <p>
-                            Suporte duplo com detalhes
-                            decorativos em coração.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 29 -->
-
-                <article
-                    class="card"
-                    data-name="Porta-Vasos Gatinho"
-                    data-description="Suporte decorativo para vasos inspirado em um gatinho, trazendo personalidade ao ambiente.">
-
-                    <img
-                        src="assets/porta-vasos-gatinho.jpeg"
-                        alt="Porta vasos gatinho"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Porta-Vasos Gatinho</h3>
-
-                        <p>
-                            Suporte decorativo inspirado
-                            em um gatinho.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 30 -->
-
-                <article
-                    class="card"
-                    data-name="Porta-Vaso Menina"
-                    data-description="Suporte artístico para vasos com design de menina segurando a planta.">
-
-                    <img
-                        src="assets/porta-vasos-menina-segurando.jpeg"
-                        alt="Porta vaso menina"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Porta-Vaso Menina</h3>
-
-                        <p>
-                            Design artístico de menina
-                            segurando a planta.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 31 -->
-
-                <article
-                    class="card"
-                    data-name="Prateleira de Cozinha"
-                    data-description="Prateleira funcional para organizar itens da cozinha e papel toalha.">
-
-                    <img
-                        src="assets/prateleira-cozinha-papel-toalha.jpeg"
-                        alt="Prateleira de cozinha"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Prateleira de Cozinha</h3>
-
-                        <p>
-                            Organização funcional para
-                            itens da cozinha.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 32 -->
-
-                <article
-                    class="card"
-                    data-name="Saca-Rolhas Ferradura"
-                    data-description="Peça artesanal inspirada na clássica ferradura, perfeita para complementar o cantinho das bebidas.">
-
-                    <img
-                        src="assets/saca-rolhas-ferradura.jpeg"
-                        alt="Saca-rolhas ferradura"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Saca-Rolhas Ferradura</h3>
-
-                        <p>
-                            Peça artesanal inspirada
-                            na clássica ferradura.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 33 -->
-
-                <article
-                    class="card"
-                    data-name="Suporte para Coador"
-                    data-description="Suporte artesanal para preparar café de maneira prática e deixar o cantinho do café organizado.">
-
-                    <img
-                        src="assets/suporte-coador2.jpeg"
-                        alt="Suporte para coador"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Suporte para Coador</h3>
-
-                        <p>
-                            Suporte artesanal para
-                            preparar café com praticidade.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 34 -->
-
-                <article
-                    class="card"
-                    data-name="Suporte para Mangueira"
-                    data-description="Suporte resistente para organizar a mangueira no jardim e manter o ambiente mais organizado.">
-
-                    <img
-                        src="assets/suporte-mangueira-jardim].jpeg"
-                        alt="Suporte para mangueira de jardim"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Suporte para Mangueira</h3>
-
-                        <p>
-                            Resistente e funcional para
-                            organizar a mangueira.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 35 -->
-
-                <article
-                    class="card"
-                    data-name="Suporte para Coador Modelo 2"
-                    data-description="Modelo funcional para deixar seu cantinho do café organizado e prático.">
-
-                    <img
-                        src="assets/suporte-para-coador.jpeg"
-                        alt="Suporte para coador"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Suporte para Coador</h3>
-
-                        <p>
-                            Modelo funcional para
-                            organizar o cantinho do café.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 36 -->
-
-                <article
-                    class="card"
-                    data-name="Suporte para Vasos"
-                    data-description="Estrutura metálica para valorizar plantas e vasos na decoração de ambientes internos ou externos.">
-
-                    <img
-                        src="assets/suporte-para-vasos.jpeg"
-                        alt="Suporte para vasos"
-                        class="card-image">
-
-                    <div class="card-content">
-
-                        <h3>Suporte para Vasos</h3>
-
-                        <p>
-                            Estrutura metálica para
-                            valorizar plantas e vasos.
-                        </p>
-
-                        <span class="card-more">
-                            Ver produto
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </article>
-
+                <!-- Os produtos serão carregados pelo JavaScript -->
 
             </div>
 
         </section>
 
+
     </main>
-
-
-
-    <!-- =====================================================
-         MODAL DO PRODUTO
-    ====================================================== -->
-
-    <div
-        class="product-modal"
-        id="productModal"
-        aria-hidden="true">
-
-
-        <!-- FUNDO -->
-
-        <div
-            class="modal-overlay"
-            id="modalOverlay">
-        </div>
-
-
-        <!-- JANELA -->
-
-        <div
-            class="modal-content"
-            role="dialog"
-            aria-modal="true">
-
-
-            <!-- FECHAR -->
-
-            <button
-                class="modal-close"
-                id="modalClose"
-                aria-label="Fechar">
-
-                <i class="fa-solid fa-xmark"></i>
-
-            </button>
-
-
-            <!-- IMAGEM -->
-
-            <div class="modal-image-container">
-
-                <img
-                    id="modalImage"
-                    src=""
-                    alt="Produto"
-                    class="modal-image">
-
-            </div>
-
-
-            <!-- INFORMAÇÕES -->
-
-            <div class="modal-info">
-
-                <span class="modal-tag">
-                    MONTEVILLE
-                </span>
-
-
-                <h2 id="modalTitle">
-                    Produto
-                </h2>
-
-
-                <p id="modalDescription">
-                    Descrição do produto.
-                </p>
-
-
-                <div class="modal-line"></div>
-
-
-                <p class="modal-contact-text">
-
-                    Gostou dessa peça?
-
-                    <br>
-
-                    Fale com a Monteville pelo WhatsApp
-                    para consultar preço, disponibilidade
-                    e possibilidades de personalização.
-
-                </p>
-
-
-                <!-- WHATSAPP -->
-
-                <a
-                    id="whatsappProduct"
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="whatsapp-button">
-
-                    <i class="fa-brands fa-whatsapp"></i>
-
-                    Quero esse produto
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </a>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
 
 
     <!-- =====================================================
          FOOTER
     ====================================================== -->
 
-    <footer class="footer">
+    <footer>
 
         <div class="footer-content">
 
+            <!-- TEM Q AJEITAR DPSSSS -->
+            <img
+                src="src/images/logo-garagem.jpga"
+                alt=""
+                class="footer-logo">
 
-            <div class="rodape">
+            <p>
+                Garagem do Hambúrguer.
+                Muito mais que um lanche.
+            </p>
 
-                <h2>
-                    <span class="m-minusculo">m</span>onteville
-                </h2>
 
-                <p>
-                    Serralheria Artística
-                </p>
+            <div class="social-links">
+
+                <a
+                    href="https://www.instagram.com/SEU_INSTAGRAM"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+
+                <a
+                    href="https://wa.me/5512000000000"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="WhatsApp">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                </a>
 
             </div>
-
-
-            <a
-                href="https://www.instagram.com/serralheriamonteville"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="footer-instagram">
-
-                <i class="fa-brands fa-instagram"></i>
-
-                Instagram
-
-            </a>
-
 
         </div>
 
 
         <div class="footer-bottom">
 
-            © 2026 Monteville Serralheria Artística.
-            Todos os direitos reservados.
+            
 
         </div>
 
     </footer>
 
 
-
-    <!-- =====================================================
-         JAVASCRIPT
-    ====================================================== -->
-
-    <script src="script.js"></script>
+    <script src="src/js/script.js"></script>
 
 </body>
 
