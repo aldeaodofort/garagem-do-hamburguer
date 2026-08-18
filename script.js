@@ -52,6 +52,9 @@ const navItems =
 const navbar =
     document.querySelector(".navbar");
 
+const mobileMenu =
+    document.getElementById("mobileMenu");
+
 
 /* =====================================================
    PRODUTOS
