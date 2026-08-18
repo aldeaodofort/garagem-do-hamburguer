@@ -43,8 +43,8 @@ const whatsappProduct =
 const menuButton =
     document.getElementById("menuButton");
 
-const navLinks =
-    document.querySelector(".nav-links");
+const mobileMenu =
+    document.getElementById("mobileMenu");
 
 const navItems =
     document.querySelectorAll(".nav-link");
@@ -52,8 +52,7 @@ const navItems =
 const navbar =
     document.querySelector(".navbar");
 
-const mobileMenu =
-    document.getElementById("mobileMenu");
+
 
 
 /* =====================================================
