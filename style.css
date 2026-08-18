@@ -1,310 +1,576 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+/* =========================================================
+   IMPORTAÇÃO DA FONTE
+========================================================= */
+
+@import url(
+    "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+);
+
 
 /* =========================================================
-   PALETA MONTEVILLE
-   ========================================================= */
+   VARIÁVEIS DE CORES
+========================================================= */
 
 :root {
-    --grafite: #1c1b1a;
-    --grafite-2: #222120;
-    --cinza-carvao: #292725;
-    --cinza-quente: #3a3734;
+
+    /* FUNDOS */
+
+    --preto: #121110;
+    --grafite: #191817;
+    --grafite-2: #211f1d;
+    --cinza: #302c29;
+    --cinza-claro: #3c3733;
+
+
+    /* FERRUGEM / COBRE */
 
     --ferrugem: #a94f2a;
-    --ferrugem-claro: #c56a3d;
-    --ferrugem-escuro: #81381f;
+    --ferrugem-claro: #c86a3d;
+    --ferrugem-escuro: #7d351f;
 
-    --creme: #f2ede6;
-    --bege: #b9b0a8;
+
+    /* TEXTOS */
+
+    --creme: #f3eee8;
+    --bege: #bdb3aa;
+    --bege-escuro: #8f8780;
 
     --branco: #ffffff;
 
-    --sombra: rgba(0, 0, 0, 0.35);
+
+    /* EFEITOS */
+
+    --borda: rgba(255, 255, 255, 0.07);
+
+    --sombra:
+        0 15px 40px rgba(0, 0, 0, 0.35);
+
 }
 
 
 /* =========================================================
    RESET
-   ========================================================= */
+========================================================= */
 
 * {
+
     margin: 0;
     padding: 0;
+
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+
 }
+
 
 html {
+
     scroll-behavior: smooth;
+
 }
+
 
 body {
-    background: var(--grafite);
+
+    background: var(--preto);
+
     color: var(--creme);
+
+    font-family: "Poppins", sans-serif;
+
     overflow-x: hidden;
+
 }
 
 
-/* =========================================================
-   FUNDO PRINCIPAL
-   ========================================================= */
+a {
 
-.main {
-    position: relative;
-    padding: 0 7%;
-    background:
-        radial-gradient(
-            circle at 75% 20%,
-            rgba(169, 79, 42, 0.12),
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
-            #1c1b1a 0%,
-            #242220 50%,
-            #1c1b1a 100%
-        );
+    color: inherit;
 
-    border-bottom: 1px solid rgba(197, 106, 61, 0.15);
+    text-decoration: none;
+
+}
+
+
+button {
+
+    font-family: inherit;
+
 }
 
 
 /* =========================================================
    NAVBAR
-   ========================================================= */
+========================================================= */
 
-.navbar {
-    height: 82px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+.navbar-wrapper {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
+
+    width: 100%;
+
+    background:
+        rgba(18, 17, 16, 0.94);
+
+    border-bottom:
+        1px solid rgba(200, 106, 61, 0.15);
+
+    backdrop-filter: blur(14px);
+
 }
 
 
-/* Logo */
+.navbar {
 
-.navbar .logo:first-child {
-    width: 52px;
-    height: 52px;
+    width: 100%;
+
+    max-width: 1400px;
+
+    height: 76px;
+
+    margin: 0 auto;
+
+    padding: 0 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+}
+
+
+/* =========================================================
+   MARCA
+========================================================= */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-right: auto;
+
+}
+
+
+.brand-logo {
+
+    width: 48px;
+
+    height: 48px;
 
     object-fit: cover;
 
+    display: block;
+
     border-radius: 50%;
 
-    border: 2px solid var(--ferrugem);
+    border:
+        2px solid var(--ferrugem);
 
     box-shadow:
-        0 0 0 4px rgba(169, 79, 42, 0.08),
-        0 5px 20px rgba(0, 0, 0, 0.35);
+        0 0 0 4px rgba(169, 79, 42, 0.08);
 
     transition: 0.3s ease;
+
 }
 
-.navbar .logo:first-child:hover {
-    transform: scale(1.05);
+
+.brand-logo:hover {
+
+    transform: scale(1.06);
 
     box-shadow:
-        0 0 0 5px rgba(169, 79, 42, 0.12),
-        0 8px 25px rgba(0, 0, 0, 0.45);
+        0 0 0 6px rgba(169, 79, 42, 0.10);
+
 }
 
 
-/* Nome Monteville */
-
-.navbar .logo:nth-child(2) {
-    margin-right: auto;
-
-    font-size: 25px;
-    font-weight: 700;
-
-    text-decoration: none;
+.brand-name {
 
     color: var(--creme);
 
+    font-size: 21px;
+
+    font-weight: 700;
+
     letter-spacing: -0.5px;
+
 }
 
 
 /* =========================================================
    LINKS DA NAVBAR
-   ========================================================= */
+========================================================= */
 
-.navLinks {
+.nav-links {
+
     display: flex;
+
     align-items: center;
-    gap: 32px;
+
+    gap: 30px;
+
 }
 
-.navbar .Item {
-    position: relative;
 
-    font-size: 15px;
-    font-weight: 500;
+.nav-link {
+
+    position: relative;
 
     color: var(--bege);
 
-    cursor: pointer;
+    font-size: 14px;
+
+    font-weight: 500;
 
     transition: 0.3s ease;
+
 }
 
-.navbar .Item:hover {
+
+.nav-link:hover {
+
     color: var(--creme);
+
 }
 
 
-/* Linha do item ativo */
+.nav-link::after {
 
-.navbar .Item::after {
     content: "";
 
     position: absolute;
 
     left: 0;
+
     bottom: -8px;
 
     width: 0;
+
     height: 2px;
 
     background: var(--ferrugem-claro);
 
     transition: 0.3s ease;
+
 }
 
-.navbar .Item:hover::after,
-.navbar .Item.Selected::after {
+
+.nav-link:hover::after {
+
     width: 100%;
-}
 
-.navbar .Item.Selected {
-    color: var(--creme);
 }
 
 
-/* =========================================================
-   BOTÃO MOBILE
-   ========================================================= */
+.nav-link.active {
 
-.navbar .toggler {
-    display: none;
+    color: var(--ferrugem-claro);
 
-    border: none;
-    background: transparent;
-
-    color: var(--creme);
-
-    font-size: 24px;
-
-    cursor: pointer;
 }
 
 
-/* =========================================================
-   APRESENTAÇÃO / HERO
-   ========================================================= */
+.nav-link.active::after {
 
-.Apresentacao {
-    min-height: 430px;
+    width: 100%;
+
+}
+
+
+.instagram-link {
 
     display: flex;
-    flex-direction: column;
+
     align-items: center;
-    justify-content: center;
 
-    text-align: center;
+    gap: 7px;
 
-    padding: 70px 20px 80px;
-
-    position: relative;
 }
 
 
-/* brilho ferrugem atrás do hero */
+.instagram-link i {
 
-.Apresentacao::before {
+    font-size: 15px;
+
+}
+
+
+/* =========================================================
+   MENU MOBILE
+========================================================= */
+
+.menu-button {
+
+    display: none;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 8px;
+
+    background: var(--grafite-2);
+
+    color: var(--creme);
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    position: relative;
+
+    min-height: 570px;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(169, 79, 42, 0.12),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #171615,
+            #211f1d
+        );
+
+}
+
+
+/* linhas decorativas */
+
+.hero::before {
+
     content: "";
 
     position: absolute;
 
-    width: 300px;
-    height: 300px;
+    width: 500px;
 
-    background: rgba(169, 79, 42, 0.12);
+    height: 500px;
 
-    filter: blur(100px);
+    right: -200px;
 
-    top: 20px;
-    left: 50%;
+    top: -200px;
 
-    transform: translateX(-50%);
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(200, 106, 61, 0.12);
+
+    box-shadow:
+        0 0 0 80px rgba(200, 106, 61, 0.025),
+        0 0 0 160px rgba(200, 106, 61, 0.018);
+
+}
+
+
+/* brilho */
+
+.hero-glow {
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 350px;
+
+    right: 8%;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background:
+        rgba(169, 79, 42, 0.16);
+
+    filter: blur(110px);
 
     pointer-events: none;
+
 }
 
 
 /* =========================================================
-   TÍTULOS
-   ========================================================= */
+   CONTAINER HERO
+========================================================= */
 
-.titulo {
+.hero-container {
+
     position: relative;
 
-    color: var(--creme);
+    z-index: 2;
 
-    font-size: clamp(28px, 4vw, 46px);
+    width: 100%;
 
-    font-weight: 700;
+    max-width: 1400px;
 
-    line-height: 1.15;
+    min-height: 570px;
 
-    margin: 0;
+    margin: 0 auto;
 
-    letter-spacing: -1px;
-}
+    padding: 70px 50px;
 
+    display: grid;
 
-/* destaque */
+    grid-template-columns:
+        1.15fr 0.85fr;
 
-.titulo::first-letter {
-    color: var(--ferrugem-claro);
-}
+    align-items: center;
 
+    gap: 70px;
 
-/* subtítulo */
-
-.header {
-    position: relative;
-
-    max-width: 650px;
-
-    margin-top: 18px;
-
-    color: var(--bege);
-
-    font-size: 16px;
-
-    line-height: 1.7;
 }
 
 
 /* =========================================================
-   BOTÃO PRINCIPAL
-   ========================================================= */
+   CONTEÚDO HERO
+========================================================= */
 
-.btn {
-    position: relative;
+.hero-content {
+
+    max-width: 720px;
+
+}
+
+
+.hero-tag {
 
     display: inline-flex;
 
     align-items: center;
-    justify-content: center;
+
+    gap: 8px;
+
+    margin-bottom: 16px;
+
+    color: var(--ferrugem-claro);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.hero-tag i {
+
+    font-size: 13px;
+
+}
+
+
+.hero-content h1 {
+
+    max-width: 720px;
+
+    color: var(--creme);
+
+    font-size:
+        clamp(38px, 5vw, 62px);
+
+    font-weight: 700;
+
+    line-height: 1.08;
+
+    letter-spacing: -2px;
+
+}
+
+
+.hero-content h1 span {
+
+    color: var(--ferrugem-claro);
+
+}
+
+
+.hero-description {
+
+    max-width: 630px;
+
+    margin-top: 22px;
+
+    color: var(--bege);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   BOTÕES HERO
+========================================================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
 
     margin-top: 30px;
 
-    padding: 13px 28px;
+}
+
+
+.button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 48px;
+
+    padding:
+        0 22px;
 
     border-radius: 8px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+
+}
+
+
+.button-primary {
+
+    color: var(--branco);
 
     background:
         linear-gradient(
@@ -313,124 +579,239 @@ body {
             var(--ferrugem-claro)
         );
 
-    color: var(--branco);
-
-    text-decoration: none;
-
-    font-size: 14px;
-    font-weight: 600;
-
     box-shadow:
-        0 8px 25px rgba(169, 79, 42, 0.22);
+        0 10px 30px rgba(169, 79, 42, 0.20);
 
-    transition: 0.3s ease;
 }
 
-.btn:hover {
+
+.button-primary:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(169, 79, 42, 0.35);
+
+}
+
+
+.button-secondary {
+
+    color: var(--creme);
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+    border:
+        1px solid rgba(242, 237, 230, 0.16);
+
+}
+
+
+.button-secondary:hover {
+
     transform: translateY(-3px);
 
     background:
-        linear-gradient(
-            135deg,
-            var(--ferrugem-claro),
-            #d47b4d
-        );
+        rgba(169, 79, 42, 0.15);
+
+    border-color:
+        var(--ferrugem);
+
+}
+
+
+/* =========================================================
+   DIFERENCIAIS
+========================================================= */
+
+.hero-features {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 22px;
+
+    margin-top: 35px;
+
+}
+
+
+.feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--bege);
+
+    font-size: 12px;
+
+}
+
+
+.feature i {
+
+    color: var(--ferrugem-claro);
+
+}
+
+
+/* =========================================================
+   IMAGEM HERO
+========================================================= */
+
+.hero-image-container {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 450px;
+
+    margin-left: auto;
+
+}
+
+
+.hero-image-border {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    top: 14px;
+
+    left: 14px;
+
+    border:
+        1px solid var(--ferrugem);
+
+    border-radius: 18px;
+
+    opacity: 0.5;
+
+}
+
+
+.hero-image {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: block;
+
+    width: 100%;
+
+    height: 400px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 18px;
+
+    border:
+        1px solid rgba(242, 237, 230, 0.12);
 
     box-shadow:
-        0 12px 30px rgba(169, 79, 42, 0.35);
+        0 25px 60px rgba(0, 0, 0, 0.45);
+
+    filter:
+        saturate(0.9)
+        contrast(1.05);
+
+}
+
+
+.hero-image-label {
+
+    position: absolute;
+
+    z-index: 3;
+
+    left: 20px;
+
+    bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding:
+        9px 14px;
+
+    border-radius: 7px;
+
+    color: var(--creme);
+
+    background:
+        rgba(18, 17, 16, 0.85);
+
+    border:
+        1px solid rgba(200, 106, 61, 0.35);
+
+    backdrop-filter: blur(10px);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+.hero-image-label i {
+
+    color: var(--ferrugem-claro);
+
 }
 
 
 /* =========================================================
    PRODUTOS
-   ========================================================= */
+========================================================= */
 
-.produtos {
+.products-section {
+
     position: relative;
 
-    padding: 35px 7% 80px;
-
-    background:
-        linear-gradient(
-            180deg,
-            #222120 0%,
-            #1c1b1a 100%
-        );
-}
-
-
-/* título dos produtos */
-
-.produtos > .titulo {
-    text-align: center;
-
-    font-size: 32px;
-
-    margin-bottom: 30px;
-}
-
-
-/* =========================================================
-   GRID DOS CARDS
-   ========================================================= */
-
-.cards {
     width: 100%;
 
-    display: grid;
-
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-
-    gap: 18px;
-
-    margin: 0;
-}
-
-
-/* =========================================================
-   CARD
-   ========================================================= */
-
-.card {
-    position: relative;
-
-    overflow: hidden;
+    padding:
+        85px 50px 100px;
 
     background:
+
         linear-gradient(
-            145deg,
-            #2b2927,
-            #242321
+            180deg,
+            #211f1d 0%,
+            #151413 100%
         );
 
-    border: 1px solid rgba(242, 237, 230, 0.07);
-
-    border-radius: 12px;
-
-    padding: 0 0 18px;
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.18);
-
-    transition:
-        transform 0.3s ease,
-        border-color 0.3s ease,
-        box-shadow 0.3s ease;
 }
 
 
-/* linha superior ferrugem */
+.products-section::before {
 
-.card::before {
     content: "";
 
     position: absolute;
 
     top: 0;
+
     left: 0;
 
     width: 100%;
-    height: 2px;
+
+    height: 1px;
 
     background:
         linear-gradient(
@@ -440,189 +821,680 @@ body {
             transparent
         );
 
-    opacity: 0;
+    opacity: 0.4;
 
-    transition: 0.3s ease;
-}
-
-
-/* hover */
-
-.card:hover {
-    transform: translateY(-6px);
-
-    border-color: rgba(197, 106, 61, 0.35);
-
-    box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.32),
-        0 0 25px rgba(169, 79, 42, 0.08);
-}
-
-.card:hover::before {
-    opacity: 1;
 }
 
 
 /* =========================================================
-   IMAGENS DOS CARDS
-   ========================================================= */
+   CABEÇALHO PRODUTOS
+========================================================= */
 
-.card img {
+.section-header {
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin:
+        0 auto 40px;
+
+}
+
+
+.section-tag {
+
+    display: inline-block;
+
+    color: var(--ferrugem-claro);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.section-header h2 {
+
+    margin-top: 8px;
+
+    color: var(--creme);
+
+    font-size: 36px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+}
+
+
+.section-header p {
+
+    margin-top: 8px;
+
+    color: var(--bege);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   GRID DOS CARDS
+========================================================= */
+
+.cards {
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap: 18px;
+
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-width: 0;
+
+    background:
+        linear-gradient(
+            145deg,
+            #2b2825,
+            #211f1d
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.065);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.card:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        rgba(200, 106, 61, 0.45);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.35);
+
+}
+
+
+/* detalhe ferrugem */
+
+.card::before {
+
+    content: "";
+
+    position: absolute;
+
+    z-index: 5;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--ferrugem-claro),
+            transparent
+        );
+
+    opacity: 0;
+
+    transition: 0.3s ease;
+
+}
+
+
+.card:hover::before {
+
+    opacity: 1;
+
+}
+
+
+/* =========================================================
+   IMAGEM DOS CARDS
+========================================================= */
+
+.card-image {
+
     display: block;
 
     width: 100%;
+
     height: 220px;
 
     object-fit: cover;
 
-    background: #35312e;
+    object-position: center;
 
-    transition: transform 0.4s ease;
+    background: var(--cinza);
+
+    transition:
+        transform 0.4s ease;
+
 }
 
-.card:hover img {
-    transform: scale(1.04);
+
+.card:hover .card-image {
+
+    transform:
+        scale(1.045);
+
 }
 
 
 /* =========================================================
-   TEXTO DOS CARDS
-   ========================================================= */
+   CONTEÚDO DOS CARDS
+========================================================= */
 
-.card h3 {
+.card-content {
+
+    min-height: 145px;
+
+    padding: 16px;
+
+}
+
+
+.card-content h3 {
+
     color: var(--creme);
 
-    font-size: 16px;
+    font-size: 15px;
 
     font-weight: 600;
 
-    line-height: 1.3;
+    line-height: 1.35;
 
-    padding: 16px 16px 6px;
 }
 
-.card p {
+
+.card-content p {
+
+    margin-top: 9px;
+
     color: var(--bege);
 
-    font-size: 12px;
+    font-size: 11.5px;
 
-    line-height: 1.6;
+    line-height: 1.65;
 
-    padding: 0 16px;
 }
 
 
 /* =========================================================
-   RESPONSIVIDADE
-   ========================================================= */
+   FOOTER
+========================================================= */
 
-/* Tablets */
+.footer {
+
+    padding:
+        40px 50px 25px;
+
+    background:
+        #0e0d0c;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.05);
+
+}
+
+
+.footer-content {
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.footer-content strong {
+
+    color: var(--creme);
+
+    font-size: 18px;
+
+}
+
+
+.footer-content p {
+
+    margin-top: 3px;
+
+    color: var(--bege-escuro);
+
+    font-size: 11px;
+
+}
+
+
+.footer-instagram {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--bege);
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+
+}
+
+
+.footer-instagram:hover {
+
+    color: var(--ferrugem-claro);
+
+}
+
+
+.footer-bottom {
+
+    max-width: 1400px;
+
+    margin:
+        30px auto 0;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.05);
+
+    color: #6f6862;
+
+    font-size: 10px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   TABLET - 1200PX
+========================================================= */
 
 @media (max-width: 1200px) {
 
     .cards {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+
+    }
+
+    .hero-container {
+
+        gap: 40px;
+
     }
 
 }
 
 
-/* Tablets menores */
+/* =========================================================
+   TABLET - 950PX
+========================================================= */
 
-@media (max-width: 900px) {
-
-    .main {
-        padding: 0 5%;
-    }
-
-    .produtos {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
-    .cards {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-}
-
-
-/* Celular */
-
-@media (max-width: 650px) {
+@media (max-width: 950px) {
 
     .navbar {
-        height: 70px;
+
+        padding:
+            0 25px;
+
     }
 
-    .navbar .logo:first-child {
-        width: 44px;
-        height: 44px;
+
+    .hero-container {
+
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        padding:
+            80px 25px;
+
     }
 
-    .navbar .logo:nth-child(2) {
-        font-size: 21px;
+
+    .hero-content {
+
+        max-width: 750px;
+
     }
 
-    .navLinks {
-        display: none;
+
+    .hero-image-container {
+
+        max-width: 500px;
+
+        margin:
+            20px auto 0;
+
     }
 
-    .navbar .toggler {
-        display: block;
+
+    .products-section {
+
+        padding:
+            70px 25px 80px;
+
     }
 
-    .Apresentacao {
-        min-height: 400px;
-
-        padding: 55px 20px;
-    }
-
-    .titulo {
-        font-size: 30px;
-    }
-
-    .header {
-        font-size: 14px;
-    }
-
-    .produtos {
-        padding: 30px 5% 60px;
-    }
 
     .cards {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
 
-        gap: 12px;
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
     }
 
-    .card img {
-        height: 180px;
-    }
-
-    .card h3 {
-        font-size: 14px;
-
-        padding: 12px 12px 5px;
-    }
-
-    .card p {
-        font-size: 11px;
-
-        padding: 0 12px;
-    }
 }
 
 
-/* Celular pequeno */
+/* =========================================================
+   TABLET PEQUENO - 750PX
+========================================================= */
 
-@media (max-width: 420px) {
+@media (max-width: 750px) {
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+
+    .menu-button {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 45px;
+
+    }
+
 
     .cards {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
     }
 
-    .card img {
-        height: 240px;
+
+    .card-image {
+
+        height: 210px;
+
     }
+
+}
+
+
+/* =========================================================
+   CELULAR - 550PX
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .navbar {
+
+        height: 68px;
+
+        padding:
+            0 18px;
+
+    }
+
+
+    .brand-logo {
+
+        width: 42px;
+
+        height: 42px;
+
+    }
+
+
+    .brand-name {
+
+        font-size: 19px;
+
+    }
+
+
+    .hero {
+
+        min-height: auto;
+
+    }
+
+
+    .hero-container {
+
+        padding:
+            65px 20px 70px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 38px;
+
+        letter-spacing:
+            -1px;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 13px;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        max-width: 320px;
+
+    }
+
+
+    .button {
+
+        width: 100%;
+
+    }
+
+
+    .hero-features {
+
+        flex-direction: column;
+
+        gap: 11px;
+
+    }
+
+
+    .hero-image {
+
+        height: 320px;
+
+    }
+
+
+    .products-section {
+
+        padding:
+            60px 15px 70px;
+
+    }
+
+
+    .section-header h2 {
+
+        font-size: 29px;
+
+    }
+
+
+    .cards {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+
+    }
+
+
+    .card-image {
+
+        height: 175px;
+
+    }
+
+
+    .card-content {
+
+        min-height: 145px;
+
+        padding: 13px;
+
+    }
+
+
+    .card-content h3 {
+
+        font-size: 13px;
+
+    }
+
+
+    .card-content p {
+
+        font-size: 10.5px;
+
+    }
+
+
+    .footer {
+
+        padding:
+            35px 20px 20px;
+
+    }
+
+
+    .footer-content {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR PEQUENO - 400PX
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .hero-content h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .cards {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .card-image {
+
+        height: 230px;
+
+    }
+
 }
