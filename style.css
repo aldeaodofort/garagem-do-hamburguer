@@ -167,7 +167,7 @@ button {
 
     height: 48px;
 
-    object-fit: cover;
+    object-fit: contain;
 
     display: block;
 
