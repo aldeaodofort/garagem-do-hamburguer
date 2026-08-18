@@ -82,6 +82,8 @@ button {
   font-weight: 600;
 }
 
+
+
 .navbar-wrapper {
   position: sticky;
 
@@ -1095,4 +1097,13 @@ button {
   .card-image {
     height: 230px;
   }
+}
+
+.rodape h1 {
+    font-size: 28px;
+}
+
+.rodape .m-minusculo {
+  font-size: 1.5em;
+  font-weight: 600;
 }
