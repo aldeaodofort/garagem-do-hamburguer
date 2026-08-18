@@ -43,14 +43,17 @@ const whatsappProduct =
 const menuButton =
     document.getElementById("menuButton");
 
-const mobileMenu =
-    document.getElementById("mobileMenu");
+const navLinks =
+    document.querySelector(".nav-links");
 
 const navItems =
     document.querySelectorAll(".nav-link");
 
 const navbar =
     document.querySelector(".navbar");
+
+const mobileMenu =
+    document.getElementById("mobileMenu");
 
 
 
@@ -244,45 +247,32 @@ document.addEventListener(
    MENU MOBILE
 ===================================================== */
 
-if (menuButton && navLinks) {
+if (menuButton && mobileMenu) {
 
     menuButton.addEventListener(
         "click",
         () => {
 
             const isOpen =
-                navLinks.classList.toggle("open");
-
+                mobileMenu.classList.toggle("open");
 
             menuButton.setAttribute(
                 "aria-expanded",
                 isOpen
             );
 
-
             const icon =
                 menuButton.querySelector("i");
 
-
             if (isOpen) {
 
-                icon.classList.remove(
-                    "fa-bars"
-                );
-
-                icon.classList.add(
-                    "fa-xmark"
-                );
+                icon.classList.remove("fa-bars");
+                icon.classList.add("fa-xmark");
 
             } else {
 
-                icon.classList.remove(
-                    "fa-xmark"
-                );
-
-                icon.classList.add(
-                    "fa-bars"
-                );
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
 
             }
 
