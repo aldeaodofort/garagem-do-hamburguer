@@ -1,27 +1,17 @@
 /* =====================================================
-   CONFIGURAÇÕES
+   MONTEVILLE SERRALHERIA
+   JAVASCRIPT
 ===================================================== */
 
 
-/*
-    ====================================================
-    WHATSAPP DA EMPRESA
-    ====================================================
-
-    COLOQUE AQUI O NÚMERO DA MONTEVILLE.
-
-    Formato:
-
-    5511999999999
-
-    Sem:
-    - +
-    - espaços
-    - parênteses
-    - traços
-*/
+/* =====================================================
+   CONFIGURAÇÕES
+===================================================== */
 
 const WHATSAPP_NUMBER = "5512997586956";
+
+const INSTAGRAM_URL =
+    "https://www.instagram.com/serralheriamonteville";
 
 
 /* =====================================================
@@ -32,13 +22,17 @@ const cards = document.querySelectorAll(".card");
 
 const modal = document.getElementById("productModal");
 
-const modalOverlay = document.getElementById("modalOverlay");
+const modalOverlay =
+    document.getElementById("modalOverlay");
 
-const modalClose = document.getElementById("modalClose");
+const modalClose =
+    document.getElementById("modalClose");
 
-const modalImage = document.getElementById("modalImage");
+const modalImage =
+    document.getElementById("modalImage");
 
-const modalTitle = document.getElementById("modalTitle");
+const modalTitle =
+    document.getElementById("modalTitle");
 
 const modalDescription =
     document.getElementById("modalDescription");
@@ -46,36 +40,75 @@ const modalDescription =
 const whatsappProduct =
     document.getElementById("whatsappProduct");
 
+const menuButton =
+    document.getElementById("menuButton");
+
+const navLinks =
+    document.querySelector(".nav-links");
+
+const navItems =
+    document.querySelectorAll(".nav-link");
+
+const navbar =
+    document.querySelector(".navbar");
+
 
 /* =====================================================
-   ABRIR PRODUTO
+   PRODUTOS
 ===================================================== */
 
 cards.forEach((card) => {
 
-    card.addEventListener("click", () => {
+    /* deixa claro que o card é clicável */
+    card.setAttribute("role", "button");
+
+    card.setAttribute("tabindex", "0");
+
+    card.setAttribute(
+        "aria-label",
+        "Ver detalhes do produto"
+    );
 
 
-        /* ---------------------------------------------
-           PEGAR INFORMAÇÕES DO CARD
-        --------------------------------------------- */
+    function openProduct() {
 
-        const name =
-            card.dataset.name;
+        const imageElement =
+            card.querySelector(".card-image");
 
-        const description =
-            card.dataset.description;
+        const titleElement =
+            card.querySelector("h3");
+
+        const descriptionElement =
+            card.querySelector("p");
+
+
+        /* segurança */
+        if (
+            !imageElement ||
+            !titleElement ||
+            !descriptionElement ||
+            !modal
+        ) {
+            return;
+        }
+
 
         const image =
-            card.querySelector("img").src;
+            imageElement.src;
 
         const imageAlt =
-            card.querySelector("img").alt;
+            imageElement.alt;
+
+        const name =
+            titleElement.textContent.trim();
+
+        const description =
+            descriptionElement.textContent.trim();
 
 
-        /* ---------------------------------------------
+        /* =================================================
            PREENCHER MODAL
-        --------------------------------------------- */
+        ================================================= */
 
         modalImage.src = image;
 
@@ -87,13 +120,12 @@ cards.forEach((card) => {
             description;
 
 
-        /* ---------------------------------------------
-           MENSAGEM DO WHATSAPP
-        --------------------------------------------- */
+        /* =================================================
+           WHATSAPP
+        ================================================= */
 
         const message =
-            `Olá! Vi o produto "${name}" no site da Monteville e tenho interesse nele. Gostaria de saber o valor, disponibilidade e mais informações, por favor.`;
-
+            `Olá! Vi o produto "${name}" no site da Monteville e tenho interesse nele. Gostaria de saber quanto custa, se está disponível e receber mais informações, por favor.`;
 
         const whatsappURL =
             `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
@@ -103,15 +135,44 @@ cards.forEach((card) => {
             whatsappURL;
 
 
-        /* ---------------------------------------------
+        /* =================================================
            ABRIR MODAL
-        --------------------------------------------- */
+        ================================================= */
 
         modal.classList.add("active");
 
-        document.body.style.overflow = "hidden";
+        document.body.classList.add("modal-open");
 
-    });
+    }
+
+
+    /* clique normal */
+
+    card.addEventListener(
+        "click",
+        openProduct
+    );
+
+
+    /* teclado */
+
+    card.addEventListener(
+        "keydown",
+        (event) => {
+
+            if (
+                event.key === "Enter" ||
+                event.key === " "
+            ) {
+
+                event.preventDefault();
+
+                openProduct();
+
+            }
+
+        }
+    );
 
 });
 
@@ -122,27 +183,39 @@ cards.forEach((card) => {
 
 function closeModal() {
 
+    if (!modal) {
+        return;
+    }
+
     modal.classList.remove("active");
 
-    document.body.style.overflow = "";
+    document.body.classList.remove("modal-open");
 
 }
 
 
-/* BOTÃO X */
+/* botão X */
 
-modalClose.addEventListener(
-    "click",
-    closeModal
-);
+if (modalClose) {
+
+    modalClose.addEventListener(
+        "click",
+        closeModal
+    );
+
+}
 
 
-/* CLICAR FORA */
+/* clicar no fundo */
 
-modalOverlay.addEventListener(
-    "click",
-    closeModal
-);
+if (modalOverlay) {
+
+    modalOverlay.addEventListener(
+        "click",
+        closeModal
+    );
+
+}
 
 
 /* ESC */
@@ -153,6 +226,7 @@ document.addEventListener(
 
         if (
             event.key === "Escape" &&
+            modal &&
             modal.classList.contains("active")
         ) {
 
@@ -168,67 +242,19 @@ document.addEventListener(
    MENU MOBILE
 ===================================================== */
 
-const menuButton =
-    document.getElementById("menuButton");
+if (menuButton && navLinks) {
 
-const mobileMenu =
-    document.getElementById("mobileMenu");
-
-
-menuButton.addEventListener(
-    "click",
-    () => {
-
-        mobileMenu.classList.toggle("open");
-
-        const icon =
-            menuButton.querySelector("i");
-
-
-        if (
-            mobileMenu.classList.contains("open")
-        ) {
-
-            icon.classList.remove(
-                "fa-bars"
-            );
-
-            icon.classList.add(
-                "fa-xmark"
-            );
-
-        } else {
-
-            icon.classList.remove(
-                "fa-xmark"
-            );
-
-            icon.classList.add(
-                "fa-bars"
-            );
-
-        }
-
-    }
-);
-
-
-/* =====================================================
-   FECHAR MENU MOBILE AO CLICAR
-===================================================== */
-
-const mobileLinks =
-    mobileMenu.querySelectorAll("a");
-
-
-mobileLinks.forEach((link) => {
-
-    link.addEventListener(
+    menuButton.addEventListener(
         "click",
         () => {
 
-            mobileMenu.classList.remove(
-                "open"
+            const isOpen =
+                navLinks.classList.toggle("open");
+
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                isOpen
             );
 
 
@@ -236,13 +262,80 @@ mobileLinks.forEach((link) => {
                 menuButton.querySelector("i");
 
 
-            icon.classList.remove(
-                "fa-xmark"
-            );
+            if (isOpen) {
 
-            icon.classList.add(
-                "fa-bars"
-            );
+                icon.classList.remove(
+                    "fa-bars"
+                );
+
+                icon.classList.add(
+                    "fa-xmark"
+                );
+
+            } else {
+
+                icon.classList.remove(
+                    "fa-xmark"
+                );
+
+                icon.classList.add(
+                    "fa-bars"
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   FECHAR MENU MOBILE AO CLICAR
+===================================================== */
+
+navItems.forEach((link) => {
+
+    link.addEventListener(
+        "click",
+        () => {
+
+            if (
+                navLinks &&
+                navLinks.classList.contains("open")
+            ) {
+
+                navLinks.classList.remove(
+                    "open"
+                );
+
+            }
+
+
+            if (menuButton) {
+
+                menuButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                const icon =
+                    menuButton.querySelector("i");
+
+
+                if (icon) {
+
+                    icon.classList.remove(
+                        "fa-xmark"
+                    );
+
+                    icon.classList.add(
+                        "fa-bars"
+                    );
+
+                }
+
+            }
 
         }
     );
@@ -251,20 +344,16 @@ mobileLinks.forEach((link) => {
 
 
 /* =====================================================
-   NAVEGAÇÃO - ITEM ATIVO
+   ITEM ATIVO DA NAVBAR
 ===================================================== */
 
-const navLinks =
-    document.querySelectorAll(".nav-link");
-
-
-navLinks.forEach((link) => {
+navItems.forEach((link) => {
 
     link.addEventListener(
         "click",
         () => {
 
-            navLinks.forEach((item) => {
+            navItems.forEach((item) => {
 
                 item.classList.remove(
                     "active"
@@ -284,28 +373,71 @@ navLinks.forEach((link) => {
 
 
 /* =====================================================
-   ALTERAR NAVBAR AO ROLAR
+   NAVBAR AO ROLAR
 ===================================================== */
-
-const navbar =
-    document.querySelector(".navbar");
-
 
 window.addEventListener(
     "scroll",
     () => {
 
+        if (!navbar) {
+            return;
+        }
+
+
         if (window.scrollY > 30) {
 
-            navbar.style.background =
-                "rgba(7, 9, 16, 0.92)";
+            navbar.classList.add(
+                "scrolled"
+            );
 
         } else {
 
-            navbar.style.background =
-                "rgba(9, 11, 20, 0.72)";
+            navbar.classList.remove(
+                "scrolled"
+            );
 
         }
 
     }
 );
+
+
+/* =====================================================
+   ANIMAÇÃO DOS CARDS AO ENTRAR NA TELA
+===================================================== */
+
+const observer =
+    new IntersectionObserver(
+        (entries) => {
+
+            entries.forEach(
+                (entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add(
+                            "show"
+                        );
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+        {
+            threshold: 0.08
+        }
+    );
+
+
+cards.forEach((card) => {
+
+    observer.observe(card);
+
+});
